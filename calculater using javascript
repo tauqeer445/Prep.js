@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <input type="text" value=" " name="num1">
+            <input type="text" value=" " name="num2"><br>
+            <button type="button" onclick="add(num1.value,num2.value)">add</button>
+            <button type="button" onclick="subtract(num1.value,num2.value)">subtract</button>
+            <button type="button" onclick="multiply(num1.value,num2.value)">Multiply</button>
+            <button type="button" onclick="divide(num1.value,num2.value)">divide</button>
+            <button type="button" onclick="resetResult()">clear</button>
+        </form>
+        <p id="ans"></p>
+        <script>
+            function resetResult(){
+                document.getElementById("ans").innerHTML="".value="0";
+            }
+            function add(num1,num2){
+                let result = parseInt(num1) + parseInt(num2);
+                document.getElementById("ans").innerHTML=`your answer is ${result}`;
+            }
+            function subtract(num1,num2){
+                let result = parseInt(num1) - parseInt(num2);
+                document.getElementById("ans").innerHTML=`your answer is ${result}`;
+            }
+            function multiply(num1,num2){
+                let result = parseInt(num1) * parseInt(num2);
+                document.getElementById("ans").innerHTML=`your answer is ${result}`;
+            }
+            function divide(num1,num2){
+                let result = parseInt(num1) / parseInt(num2);
+                document.getElementById("ans").innerHTML=`your answer is ${result}`;
+            }
+        </script>
+    </body>
+</html>
