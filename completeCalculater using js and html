@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input type="text" id="result" readonly>
+    <br>
+    <button onclick="addNumber('1')">1</button>
+    <button onclick="addNumber('2')">2</button>
+    <button onclick="addNumber('3')">3</button>
+    <button onclick="addOperator('+')">+</button>
+    <br>
+    <button onclick="addNumber('4')">4</button>
+    <button onclick="addNumber('5')">5</button>
+    <button onclick="addNumber('6')">6</button>
+    <button onclick="addOperator('-')">-</button>
+    <br>
+    <button onclick="addNumber('7')">7</button>
+    <button onclick="addNumber('8')">8</button>
+    <button onclick="addNumber('9')">9</button>
+    <button onclick="addOperator('*')">*</button>
+    <br>
+    <button onclick="addNumber('0')">0</button>
+    <button onclick="clearResult()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="addOperator('/')">/</button>
+    <br>
+
+    <script>
+      let currentResult = "";
+      let currentOperator = "";
+
+      function addNumber(num) {
+        currentResult += num;
+        document.getElementById("result").value = currentResult;
+      }
+
+      function addOperator(op) {
+        currentOperator = op;
+        currentResult += op;
+        document.getElementById("result").value = currentResult;
+      }
+
+      function clearResult() {
+        currentResult = "";
+        currentOperator = "";
+        document.getElementById("result").value = "";
+      }
+
+      function calculate() {
+        let expression = currentResult.split(currentOperator);
+        let num1 = parseFloat(expression[0]);
+        let num2 = parseFloat(expression[1]);
+
+        switch (currentOperator) {
+          case "+":
+            currentResult = num1 + num2;
+            break;
+          case "-":
+            currentResult = num1 - num2;
+            break;
+          case "*":
+            currentResult = num1 * num2;
+            break;
+          case "/":
+            currentResult = num1 / num2;
+            break;
+          default:
+            break;
+        }
+
+        document.getElementById("result").value = currentResult;
+      }
+    </script>
+  </body>
+</html>
