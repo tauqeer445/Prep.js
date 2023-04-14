@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Print the most repated srting</title></head>
+    <body>
+        <script>
+            let arr = ['apple', 'banana', 'orange', 'banana', 'apple', 'banana','orange','orange','orange'];
+            function mostRepeatedString(arr) {
+  let map = {};
+  let maxCount = 0;
+  let maxString = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    let currentString = arr[i];
+    if (!map[currentString]) {
+      map[currentString] = 1;
+    } else {
+      map[currentString]++;
+    }
+
+    if (map[currentString] > maxCount) {
+      maxCount = map[currentString];
+      maxString = currentString;
+      console.log(maxCount);
+    }
+    
+  }
+
+  return maxString;
+  
+}
+
+let mostRepeated = mostRepeatedString(arr);
+console.log(mostRepeated); // Output: 'banana'
+
+        </script>
+    </body>
+</html>
