@@ -25,3 +25,38 @@
 
 </script>
 <!-- Output is NaN -->
+
+<script>
+    const arr1=[1,2,3];
+    const arr2=arr1;
+    arr2.push(4);
+    console.log(arr1);
+</script>
+output is <div 1,2,3,4=""></div>
+<script>
+const massege = "hello world";
+const result = massege.split("").reverse().join("");
+console.log(result);
+</script>
+output is dlrow olleh
+<script>
+    function makeAdder(x){
+        return function(y){
+        return x+y;
+        };
+    };
+    const add = makeAdder(5);
+    console.log(add(3));
+    // thats work perfactly;
+</script>
+<script>
+    const person ={
+        firstName : "Tauqeer",
+        lastName : "khan",
+        getfullName: function(){
+            return `${this.firstName}${this.lastName}`;
+        },        
+    };
+    const myname = person.getfullName();
+    console.log(myname);
+</script>
