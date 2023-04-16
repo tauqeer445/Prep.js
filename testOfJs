@@ -1,0 +1,8 @@
+ <script>
+        let a = 10;
+        function changeA(){
+            a = 5;
+        }
+        changeA();
+        console.log(a);
+    </script>
