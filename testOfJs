@@ -6,3 +6,12 @@
         changeA();
         console.log(a);
     </script>
+<!--output is 5-->
+
+   <script>
+    let x = 5;
+    let y = x*2;
+    x = 50;
+    console.log(y);
+   </script>
+   <!-- output is 10 -->
