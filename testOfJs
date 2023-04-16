@@ -15,3 +15,13 @@
     console.log(y);
    </script>
    <!-- output is 10 -->
+
+<script>
+    function calculate(a,b,c){
+        return a*b*c;
+    }
+    
+    console.log(calculate(2,3));
+
+</script>
+<!-- Output is NaN -->
