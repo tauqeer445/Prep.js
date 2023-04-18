@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    <body>
+        <!-- <h1>Contact Us!</h1> -->
+        <div class="flex-container">           
+            
+              <div id="contactus">
+                        <h1>Contact Us!</h1>
+
+                        <i class="fa-solid fa-envelope" id="icn"> <span id="send">Send a Massege</span></i>
+             </div>
+                    <div id="form" >
+                        <form name="myForm">
+                            <input class="email" id="email" type="email" placeholder="Email" required validate><br>
+                          <p id="required"></p>
+                            <input class="email" id="pnmbr" type="text" placeholder="Phone Number"><br>
+                            <p id="required-em"></p>
+                            <input class="email" id="company" type="text" placeholder="Company" ><br>
+                            <p id="required-cmp"></p>
+                            <textarea class="text" id="help" placeholder="Please tell us how can we help you?"></textarea><br>
+                            <p id="required-text"></p>
+                            <button class="btn" id="sub" type="button" onclick="validForm()">Submit</button>
+                        </form>
+                   </div>
+        </div>
+        <script>
+            function validForm() {
+              let email = document.getElementById("email").value;
+              let nmbr = document.getElementById("pnmbr").value;
+              let compny = document.getElementById("company").value;
+              let hlp = document.getElementById("help").value;
+              let sbmt = document.getElementById("sub").value;
+              
+              
+              if (email == "" ) {
+                document.getElementById("required").innerHTML="Please fill the require feild";
+                document.getElementById("required").style.color="red";
+                
+              }
+              else if (nmbr == ""){
+                document.getElementById("required-em").innerHTML="Please fill the require feild";
+                document.getElementById("required-em").style.color="red";
+              }
+              else if (compny == ""){
+                document.getElementById("required-cmp").innerHTML="Please fill the require feild";
+                document.getElementById("required-cmp").style.color="red";
+              }
+              else if(hlp == ""){
+                document.getElementById("required-text").innerHTML="Please fiil out the feild";
+                document.getElementById("required-text").style.color="red";
+              }
+              else if(sub == ""){
+                document.getElementById("required-text").innerHTML="One or more fields have error. Please fill out";
+                document.getElementById("required-text").style.color="red";
+              }
+            }
+            </script>
+    </body>
+</html>
+
+
+
+css file
+
+.flex-container{
+    box-shadow: 3px 3px 3px 3px #dedddd;
+    display: flex;
+       
+}
+
+#contactus{
+     width: 100%;
+     margin-left: 1%;
+  
+     
+}
+
+#form{
+    width: 100%;
+    margin-top: 4%;
+    
+}
+.email{
+    width: 90%;
+    background-color: #F8F3F7;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    margin-bottom: 10px;
+}
+.text{
+    width: 90%;
+    height: 250px;
+    background-color: #F8F3F7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.btn{
+    width: 90%;
+    color: white;
+    background-color: rgb(16, 37, 96);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    font-family: serif;
+    font-size: 20px;
+}
+#icn{
+    padding-top: 17px;
+    padding-bottom: -19px;
+    color: white;
+    margin-left: 30px;
+    background-color: #00B8AE;
+    border-radius: 5px;
+    width: 95%;
+    height: 45px;
+    display: flex;
+    margin: 0px;
+    padding-left: 15px;
+}
+#send{
+    margin-left: 15px;
+    font-family: sans-serif;
+}   
