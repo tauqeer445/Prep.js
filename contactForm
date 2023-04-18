@@ -65,7 +65,7 @@
             
             <script>
                 function myfun(event){
-                    event.perventDefault();
+                    event.perventDefault;
                     var mail = document.getElementById("email").value;
                     var phone = document.getElementById("pnmbr").value;
                     var company = document.getElementById("company").value;
