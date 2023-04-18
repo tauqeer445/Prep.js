@@ -17,7 +17,7 @@
                         <i class="fa-solid fa-envelope" id="icn"> <span id="send">Send a Massege</span></i>
              </div>
                     <div id="form" >
-                        <form name="myForm">
+                        <form name="myForm" onsubmit="myfun(event)">
                             <input class="email" id="email" type="email" placeholder="Email" required validate><br>
                           <p id="required"></p>
                             <input class="email" id="pnmbr" type="text" placeholder="Phone Number"><br>
@@ -61,6 +61,19 @@
                 document.getElementById("required-text").style.color="red";
               }
             }
+            </script>
+            
+            <script>
+                function myfun(event){
+                    event.perventDefault();
+                    var mail = document.getElementById("email").value;
+                    var phone = document.getElementById("pnmbr").value;
+                    var company = document.getElementById("company").value;
+    
+                    localStorage.setItem("Is_mail",mail);
+                    localStorage.setItem("Is_phone",phone);
+                    localStorage.setItem("Is_company",company);
+                }
             </script>
     </body>
 </html>
