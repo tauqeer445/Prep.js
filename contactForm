@@ -28,7 +28,10 @@
                             <p id="required-text"></p>
                             <button class="btn" id="sub" type="button" onclick="validForm()">Submit</button>
                         </form>
+                         <button class="btn" onclick="myFunction()">Get</button>
+                        <p id="demo"></p>
                    </div>
+                   
         </div>
         <script>
             function validForm() {
@@ -74,6 +77,15 @@
                     localStorage.setItem("Is_phone",phone);
                     localStorage.setItem("Is_company",company);
                 }
+               function myFunction() {
+                                    
+                                   let m= localStorage.getItem("Is_mail");
+                                  let p=localStorage.getItem("Is_phone");
+                                  let c=  localStorage.getItem("Is_company");
+                                  document.getElementById("demo").innerHTML=m + "<br>" + p +"<br>"+ c;
+
+                          }
+
             </script>
     </body>
 </html>
