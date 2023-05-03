@@ -30,8 +30,7 @@
                         </form>
                          <button class="btn" onclick="myFunction()">Get</button>
                         <p id="demo"></p>
-                   </div>
-                   
+                   </div>      
         </div>
         <script>
             function validForm() {
@@ -40,8 +39,7 @@
               let compny = document.getElementById("company").value;
               let hlp = document.getElementById("help").value;
               let sbmt = document.getElementById("sub").value;
-              
-              
+             
               if (email == "" ) {
                 document.getElementById("required").innerHTML="Please fill the require feild";
                 document.getElementById("required").style.color="red";
@@ -83,14 +81,10 @@
                                   let p=localStorage.getItem("Is_phone");
                                   let c=  localStorage.getItem("Is_company");
                                   document.getElementById("demo").innerHTML=m + "<br>" + p +"<br>"+ c;
-
                           }
-
             </script>
     </body>
 </html>
-
-
 
 css file
 
