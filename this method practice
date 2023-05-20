@@ -1,0 +1,32 @@
+// Global Scope
+console.log(this); // Output: [object Window] (in a browser environment)
+
+// Function Context
+function myFunction() {
+  console.log(this);
+}
+
+myFunction(); // Output: [object Window] (in a browser environment)
+
+// Method Invocation
+const myObject = {
+  name: 'John',
+  sayHello: function() {
+    console.log('Hello, ' + this.name);
+  }
+};
+
+myObject.sayHello(); // Output: Hello, John
+
+// Arrow Functions
+const myArrowFunction = () => {
+  console.log(this);
+};
+
+myArrowFunction(); // Output: [object Window] (in a browser environment)
+
+// Event Handlers
+const myButton = document.querySelector('#myButton');
+myButton.addEventListener('click', function() {
+  console.log(this); // Output: [object HTMLButtonElement]
+});
